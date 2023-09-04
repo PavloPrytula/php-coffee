@@ -42,7 +42,6 @@ $data = [
 ];
 
 
-
 dd(json_encode($data));
 
 
