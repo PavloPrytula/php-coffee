@@ -1,16 +1,21 @@
+<?php $about_us = $content['about_us'] ?>
 <section id="about-us" class="section-gap pt-40">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 video-block d-flex align-items-center justify-content-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rABfboy0h6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rABfboy0h6o"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
             </div>
-            <div class="col-sm-12 col-md-6 description-block d-flex flex-column align-items-start justify-content-center">
-                <h6>LIVE COFFEE MAKING PROCESS.</h6>
-                <h1>We Telecast our Coffee Making Live</h1>
-                <p class="quote"><b>We are here to listen from you deliver exellence</b></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                <img src="assets/img/signature.png">
-            </div>
+            <?php if ($about_us['text']): ?>
+                <div class="col-sm-12 col-md-6 description-block d-flex flex-column align-items-start justify-content-center">
+                    <h6><?= $about_us['text']['subtitle'] ?></h6>
+                    <h1><?= $about_us['text']['title'] ?></h1>
+                    <p class="quote"><b><?= $about_us['text']['quote'] ?></b></p>
+                    <img src="<?= IMAGES_URI ?>/<?= $about_us['text']['image'] ?>">
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
