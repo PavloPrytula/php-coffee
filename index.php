@@ -22,8 +22,8 @@ try {
         require_once BASE_DIR . '/configs/router.php';
     }
 } catch (PDOException $exception) {
-    d('PDOException');
-    dd($exception->getCode() . ' - "' . $exception->getMessage() . '"');
+    notify($exception->getMessage(), 'danger');
+    redirectBack();
 } catch (Exception $exception) {
     dd($exception->getCode() . ' - "' . $exception->getMessage() . '"');
 }
