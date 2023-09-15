@@ -31,5 +31,6 @@ function dbSelect(Tables $table, string $colums = '*', string $condition = null,
 
 function dbFind(Tables $table, int $id):array
 {
-    return dbSelect($table);
+    return dbSelect($table, condition: "id = $id", isSingle: true);
 }
+
