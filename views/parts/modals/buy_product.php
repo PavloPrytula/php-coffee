@@ -58,7 +58,7 @@
                 </div>
                 <div class="modal-footer">
                     <h4 class="final">Total: <span class="total"></span></h4>
-                    <button type="button" class="btn btn-primary">Add to <i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="submit" class="btn btn-primary">Add to <i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </form>
         </div>
