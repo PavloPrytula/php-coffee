@@ -33,6 +33,10 @@
                                    aria-current="page"><?= $link['title'] ?></a>
                             </li>
                         <?php endforeach; ?>
+                        <li class="nav-item">
+                            <a href="/cart" class="nav-link"
+                               aria-current="page">Cart</a>
+                        </li>
                     <?php endif; ?>
                         <?php if (!isAuth()): ?>
                             <li class="nav-item">
